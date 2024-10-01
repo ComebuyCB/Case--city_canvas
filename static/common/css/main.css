@@ -1,0 +1,211 @@
+/*
+Structure instruction：
+    # [Default Css]
+        - [Root Css]: :root { ... }
+        - [Structure]: html, body, main, #wrap ...
+        - [HtmlTag]: h1, a, ::-webkit-scrollbar ...
+
+    # [Plugins]
+        - [Plugins Modified]: Bootstrap Modals...
+        - [Plugins SelfMade]: My Modals...
+
+    # [Public Style]
+        - [Simple Css]: typesetting, color ... ( Single Css )
+        - [Elements]: button, checkbox, icon ... ( Simple Component )
+        - [Components]: RWD_table, user_avatar ... ( Complex Components )
+
+    # [Pages]
+        - [Include Page]: header, footer
+        - [Current Page]: #login, #about
+
+    -- Author Comebuy
+*/
+
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/*######### [Default Css] #########*/
+    /*====== [Root Css] ======*/
+        :root {
+            /* color */
+            --primary: #D72873;
+            --primary-hover: #D72873;
+            --secondary: #F6A800;
+            --dark: #292929;
+
+            /* font */
+            --ff-default: 'Noto Sans TC';
+            --fs-h1: 60px;
+            --fs-h2: 48px;
+            --fs-h3: 24px;
+            --fs-p: 18px;
+            --header-height: 70px;
+        }
+
+        @media (max-width: 991.98px){
+            :root {
+                --fs-h1: 36px;
+                --fs-h2: 18px;
+                --fs-h3: 18px;
+                --fs-p: 14px;
+                --header-height: 48px; 
+            } 
+        }
+
+
+    /*====== [Structure] ======*/
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', var(--ff-default), 'Microsoft JhengHei', sans-serif; font-size: var(--fs-p); }
+        #wrap { display: flex; flex-direction: column; margin-inline: auto; min-height: 100vh; min-height: 100dvh; max-width: 1920px; overflow-x: hidden; }
+        main { flex-grow: 1; }
+
+
+    /*====== [HtmlTag] =======*/
+        a { color: var(--bs-dark); text-decoration: none; }
+        a:hover { color: inherit; text-decoration: none; }
+        label { margin-bottom: 0; }
+
+
+
+/*######### [Plugins] #########*/
+    /*====== [Plugins Modified] ======*/
+        /*=== Bootstrap ===*/
+            button:focus { box-shadow: none !important; }
+            .btn { 
+                --bs-btn-focus-box-shadow: transparent; /* 如果不要shadow */ 
+                display: inline-flex; align-items: center; justify-content: center; font-size: var(--fs-btn); 
+            }
+
+            [class*="btn_"] {
+                --default-color: ; --default-bg: ;
+                --hover-color: ; --hover-bg: ;
+                --bs-btn-color: var(--default-color); --bs-btn-bg: var(--default-bg); --bs-btn-border-color: var(--default-bg);
+                --bs-btn-disabled-color: var(--default-color); --bs-btn-disabled-bg: var(--default-bg); --bs-btn-disabled-border-color: var(--default-bg);
+                --bs-btn-hover-color: var(--hover-color); --bs-btn-hover-bg: var(--hover-bg); --bs-btn-hover-border-color: var(--hover-bg);
+                --bs-btn-active-color: var(--hover-color); --bs-btn-active-bg: var(--hover-bg); --bs-btn-active-border-color: var(--hover-bg);
+            }
+            [class*="btn_outline_"] {
+                --default-color: ; --default-bg: ;
+                --hover-color: ; --hover-bg: ;
+                --bs-btn-color: var(--default-color); --bs-btn-bg: transparent; --bs-btn-border-color: var(--default-color);
+                --bs-btn-disabled-color: var(--default-color); --bs-btn-disabled-bg: transparent; --bs-btn-disabled-border-color: var(--default-color);
+                --bs-btn-hover-color: var(--hover-color); --bs-btn-hover-bg: var(--hover-bg); --bs-btn-hover-border-color: var(--hover-bg);
+                --bs-btn-active-color: var(--hover-color); --bs-btn-active-bg: var(--hover-bg); --bs-btn-active-border-color: var(--hover-bg);
+            }
+            .btn_custom { --default-bg: #e75a23; --default-color: white; --hover-bg: #bb4112; --hover-color: white; }
+            .btn_outline_custom { --default-bg: white; --default-color: #e75a23; --hover-bg: #e75a23; --hover-color: white; }
+            .btn_active_darker {
+                --bs-btn-hover-border-color: color-mix(in srgb, var(--bs-btn-hover-bg), black 6%);
+                --bs-btn-active-bg: color-mix(in srgb, var(--bs-btn-hover-bg), black 6%);
+                --bs-btn-active-border-color: color-mix(in srgb, var(--bs-btn-hover-bg), black 12%);
+            }
+            .btn_active_lighter {
+                --bs-btn-hover-border-color: color-mix(in srgb, var(--bs-btn-hover-bg), white 6%);
+                --bs-btn-active-bg: color-mix(in srgb, var(--bs-btn-hover-bg), white 6%);
+                --bs-btn-active-border-color: color-mix(in srgb, var(--bs-btn-hover-bg), white 0%);
+            }
+
+
+    /*====== [Plugins SelfMade] ======*/
+        /*=== js- ===*/
+            
+
+
+/*######### [Public Style] #########*/
+    /*====== [Simple Css] ======*/
+        /*=== typesetting ===*/
+        /*=== color ===*/
+        /*=== font ===*/
+
+
+    /*====== [Elements] ======*/
+        /*=== oval ===*/
+            .oval_section { position: relative; min-height: 717px; color: white; background: url(../img/oval-primary.png) center center no-repeat; background-size: cover; }
+            .oval_body { position: relative; padding-block: 10%; }
+            .section_top_signboard { position: absolute; top: 0; left: 50%; transform: translate(-50%,-30%); }
+
+        
+        /*=== signboard ===*/
+            .signboard { display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; height: 90px; font-size: var(--fs-h2); font-weight: bold; border: 5px solid var(--primary); border-radius: 100vmax; padding: 0 30px; background: white; color: var(--dark); }
+            .signboard::before,
+            .signboard::after { content: ''; display: block; margin-inline: 38px; width: 38px; height: 38px; background: center center no-repeat; background-size: contain; }
+            
+            .signboard_sm { height: 60px; font-size: var(--fs-h3); padding: 0 10px; }
+            .signboard_sm::before,
+            .signboard_sm::after { width: 20px; height: 20px; margin-inline: 20px; }
+
+            .signboard_primary { border-color: var(--primary); }
+            .signboard_primary::before,
+            .signboard_primary::after { background-image: url(../img/icon/DiamondStar-primary.svg); }
+
+            .signboard_secondary { border-color: var(--secondary); }
+            .signboard_secondary::before,
+            .signboard_secondary::after { background-image: url(../img/icon/DiamondStar-secondary.svg); }
+
+            @media (max-width: 991.98px){
+                .signboard { height: 42px; padding: 0 8px; }
+                .signboard::before,
+                .signboard::after { margin-inline: 12px; width: 20px; height: 20px; }
+            }
+
+
+
+    /*====== [Components] ======*/
+        /*=== rwd_table ===*/
+
+
+
+/*######### [Pages] #########*/
+    /*====== [Include Page] ======*/
+        /*=== header ===*/
+            header { position: fixed; display: flex; top: 0; left: max(0px, calc((100% - 1920px) / 2)); right: 0; width: min(100%, 1920px); z-index: 11; }
+            header > .navbar { margin-left: auto; display: inline-flex; background: white; border: 3px solid var(--primary); border-right: 0; border-radius: 100vmax 0 0 100vmax; margin-top: 40px; padding-inline: 24px; }
+            header .navbar-brand { position: absolute; width: 180px; top: 0; left: 16px; border-radius: 0 0 100vmax 100vmax; background: white; padding: 15px 20px 35px 20px; 
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); backdrop-filter: blur(10px); z-index: 9; }
+            .header_icons_group { display: flex; }
+            .header_icons_group > * { margin-left: 8px; }
+            .header_icon { --size: 40px; display: flex; align-items: center; justify-content: center; width: var(--size); height: var(--size); border-radius: 100vmax; }
+            .header_icon._lang { border: 2px solid var(--primary); color: var(--primary); font-weight: bold; }
+
+            .navbar-collapse > .navbar-nav > .nav-item > .nav-link { display: inline-flex; align-items: center; justify-content: center; color: var(--primary); padding-inline: 16px; font-size: 20px; font-weight: bold; }
+            .navbar-collapse > .navbar-nav > .nav-item > .nav-link::before { content: ''; display: block; margin-right: 6px; width: 20px; height: 20px; background: url(../img/icon/DiamondStar-primary.svg) center center no-repeat; }
+            .navbar-toggler { border: 0; padding: 4px; margin-left: 12px; }
+            @media (max-width: 991.98px){
+                header > .navbar { width: 100%; border: 0; border-radius: 0; margin-top: 0px; padding-inline: 0; }
+                header .header_icon { --size: 32px; }
+                header .navbar-brand { width: 120px; padding: 10px 15px 25px 15px; }
+                header .navbar-collapse { position: fixed; top: var(--header-height); left: 0; right: 0; padding-inline: 16px; background: white; border-radius: 0 0 24px 24px; background-color: rgba(255,255,255,0.95); }
+                header .navbar-collapse > .navbar-nav > .nav-item { text-align: center; }
+                header .navbar-collapse > .navbar-nav > .nav-item > .nav-link { padding: 16px 24px; }
+                header .navbar-collapse > .navbar-nav > .nav-item + .nav-item > .nav-link { border-top: 1px solid #C9C9C9; }
+            }
+            @media (max-width: 399.99px){
+                header .navbar-brand { width: 100px; }
+            }
+
+
+        /*=== footer ===*/
+            footer { position: relative; z-index: 10; margin-top: -12px; background: white; border-radius: 25px 25px 0px 0px; padding: 15px 60px; }
+
+
+
+    /*====== [Current Page] ======*/
+        /*=== index ===*/
+
+
+
+
+/*###### [Note] ######*/
+/* Mobile() -> PC */
+    @media (width >= 576px){} /* sm */
+    @media (width >= 768px){} /* md */
+    @media (width >= 992px){} /* lg */
+    @media (width >= 1200px){} /* xl */
+    @media (width >= 1400px){} /* xxl */
+
+/* PC(xxl) -> Mobile */
+    @media (width < 1400px){} /* xl */
+    @media (width < 1200px){} /* lg */
+    @media (width < 992px){} /* md */
+    @media (width < 768px){} /* sm */
+    @media (width < 576px){} /*  */
