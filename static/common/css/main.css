@@ -59,7 +59,7 @@ Structure instruction：
     /*====== [Structure] ======*/
         html { scroll-behavior: smooth; }
         body { font-family: 'Inter', var(--ff-default), 'Microsoft JhengHei', sans-serif; font-size: var(--fs-p); }
-        #wrap { display: flex; flex-direction: column; margin-inline: auto; min-height: 100vh; min-height: 100dvh; max-width: 1920px; overflow-x: hidden; }
+        #wrap { display: flex; flex-direction: column; margin-inline: auto; min-height: 100vh; min-height: 100dvh; max-width: 1920px; }
         main { flex-grow: 1; }
 
 
@@ -177,6 +177,7 @@ Structure instruction：
             .navbar-collapse > .navbar-nav > .nav-item > .nav-link::before { content: ''; display: block; margin-right: 6px; width: 20px; height: 20px; background: url(../img/icon/DiamondStar-primary.svg) center center no-repeat; }
             .navbar-toggler { border: 0; padding: 4px; margin-left: 12px; }
             @media (max-width: 991.98px){
+                header { position: sticky; }
                 header > .navbar { width: 100%; border: 0; border-radius: 0; margin-top: 0px; padding-inline: 0; }
                 header .header_icon { --size: 32px; }
                 header .navbar-brand { width: 120px; padding: 10px 15px 25px 15px; }
@@ -202,7 +203,7 @@ Structure instruction：
                 footer { padding: 15px 0; }
             }
             @media (max-width: 991.98px){
-                footer .info_blocks { justify-content: start; width: 360px; margin-inline: auto; }
+                footer .info_blocks { justify-content: start; max-width: 360px; margin-inline: auto; }
                 footer .info_blocks > ._block3 { border-left: 0; width: 100%; }
                 footer .info_blocks > ._block4 { border-left: 0; width: 100%; }
             }
@@ -212,6 +213,8 @@ Structure instruction：
 
     /*====== [Current Page] ======*/
         /*=== index ===*/
+            .index_banner_block { width: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+            .index_banner_block > img { min-width: 600px; }
             .opacity_pill_block { display: inline-block; padding: 16px 32px; border-radius: 100vmax; font-weight: bold; background: rgba(255,255,255,0.3); text-align: center; }
 
             .sponsors_block { padding: 16px 32px; display: flex; flex-wrap: wrap; justify-content: center; font-size: var(--fs-h4); border-radius: 100vmax; background: white; color: #666; }
@@ -220,7 +223,7 @@ Structure instruction：
             .sponsors_block ._logos { display: flex; align-items: center; justify-content: center; column-gap: 32px; height: 92px; }
 
             @media (max-width: 1199.98px){
-                .sponsors_block { padding: 0px 24px; border-radius: 24px; column-gap: 36px; }
+                .sponsors_block { max-width: 600px; margin-inline: auto; padding: 0px 24px; border-radius: 24px; column-gap: 36px; }
                 .sponsors_block > * { padding: 16px 0; }
                 .sponsors_block > * + * { border-left: 0; }
                 .sponsors_block > ._block1 { width: 100%; border-bottom: 1px solid var(--border); }
