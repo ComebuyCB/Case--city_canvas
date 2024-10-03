@@ -39,8 +39,10 @@ Structure instruction：
             --fs-h1: 60px;
             --fs-h2: 48px;
             --fs-h3: 24px;
-            --fs-h4: 14px;
+            --fs-h4: 20px;
+            --fs-h5: 14px;
             --fs-p: 18px;
+            --ff-FontAwesome: 'Font Awesome 5 Free';
             --header-height: 70px;
         }
 
@@ -49,7 +51,8 @@ Structure instruction：
                 --fs-h1: 36px;
                 --fs-h2: 18px;
                 --fs-h3: 18px;
-                --fs-h4: 12px;
+                --fs-h4: 16px;
+                --fs-h5: 12px;
                 --fs-p: 14px;
                 --header-height: 48px; 
             } 
@@ -68,17 +71,27 @@ Structure instruction：
         a:hover { color: inherit; text-decoration: none; }
         label { margin-bottom: 0; }
         hr { opacity: 1; border-top-color: var(--border); }
+        input[type=checkbox], input[type=radio] { accent-color: var(--dark); width: 1em; height: 1em; }
 
 
 /*######### [Plugins] #########*/
     /*====== [Plugins Modified] ======*/
         /*=== Bootstrap ===*/
+            .breadcrumb-item { --bs-breadcrumb-item-active-color: white; color: white; display: flex; align-items: center; }
+            .breadcrumb-item a { color: white; }
+            .breadcrumb-item + .breadcrumb-item::before { --bs-breadcrumb-divider-color: white; content: '\f054'; font-family: var(--ff-FontAwesome); font-weight: bold; font-size: 10px; vertical-align: middle; }
+
             button:focus { box-shadow: none !important; }
             .btn { 
                 --bs-btn-focus-box-shadow: transparent; /* 如果不要shadow */ 
                 display: inline-flex; align-items: center; justify-content: center; font-size: var(--fs-btn); 
             }
 
+            .form-label { border-left: 7px solid #F6BD00; padding-left: 8px; line-height: 1.2; }
+            .form-control { height: 50px; }
+
+
+/*
             [class*="btn_"] {
                 --default-color: ; --default-bg: ;
                 --hover-color: ; --hover-bg: ;
@@ -107,7 +120,7 @@ Structure instruction：
                 --bs-btn-active-bg: color-mix(in srgb, var(--bs-btn-hover-bg), white 6%);
                 --bs-btn-active-border-color: color-mix(in srgb, var(--bs-btn-hover-bg), white 0%);
             }
-
+*/
 
     /*====== [Plugins SelfMade] ======*/
         /*=== js- ===*/
@@ -117,63 +130,86 @@ Structure instruction：
 /*######### [Public Style] #########*/
     /*====== [Simple Css] ======*/
         /*=== typesetting ===*/
+            .flex-center-a { display: flex; align-items: center; }
+            .ch-gy-1 > *:not(:last-child) { margin-bottom: .25rem; }
+            .ch-gy-2 > *:not(:last-child) { margin-bottom: .5rem; }
+            .ch-gy-3 > *:not(:last-child) { margin-bottom: 1rem; }
+            .ch-gy-4 > *:not(:last-child) { margin-bottom: 1.5rem; }
+
+
+
         /*=== color ===*/
         /*=== font ===*/
+            .fs-h1 { font-size: var(--fs-h1); }
+            .fs-h2 { font-size: var(--fs-h2); }
+            .fs-h3 { font-size: var(--fs-h3); }
 
 
     /*====== [Elements] ======*/
-        /*=== oval ===*/
-            .oval_section { position: relative; color: white; background: top center no-repeat; background-size: 1920px auto; }
-            .oval_section_primary { background-image: url(../img/oval-primary.png); }
-            .oval_section_primary_full { background-image: url(../img/oval-primary.png), linear-gradient(to bottom, transparent 0%, transparent 360px, var(--primary) 360px); }
-            .oval_body { position: relative; padding-block: 10%; }
-            .section_top_signboard { position: absolute; top: 0; left: 50%; transform: translate(-50%,-30%); }
-            
-
-        
-        /*=== signboard ===*/
-            .signboard { display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; height: 90px; font-size: var(--fs-h2); font-weight: bold; border: 5px solid var(--primary); border-radius: 100vmax; padding: 0 30px; background: white; color: var(--dark); }
-            .signboard::before,
-            .signboard::after { content: ''; display: block; margin-inline: 38px; width: 38px; height: 38px; background: center center no-repeat; background-size: contain; }
-            
-            .signboard_sm { height: 60px; font-size: var(--fs-h3); padding: 0 10px; }
-            .signboard_sm::before,
-            .signboard_sm::after { width: 20px; height: 20px; margin-inline: 20px; }
-
-            .signboard_primary { border-color: var(--primary); }
-            .signboard_primary::before,
-            .signboard_primary::after { background-image: url(../img/icon/DiamondStar-primary.svg); }
-
-            .signboard_secondary { border-color: var(--secondary); }
-            .signboard_secondary::before,
-            .signboard_secondary::after { background-image: url(../img/icon/DiamondStar-secondary.svg); }
-
-            @media (max-width: 991.98px){
-                .signboard { height: 42px; padding: 0 8px; }
-                .signboard::before,
-                .signboard::after { margin-inline: 12px; width: 20px; height: 20px; }
-            }
+        /*=== bg ===*/
+            .bg_deco_block { position: absolute; left: 0; right: 0; bottom: 0; height: 360px; background: url(../img/bg_deco.png) center center no-repeat; background-size: cover; }
 
 
 
     /*====== [Components] ======*/
-        /*=== rwd_table ===*/
+        /*=== oval ===*/
+        .oval_section { position: relative; color: white; background: top center no-repeat; background-size: 1920px auto; }
+        @media (max-width: 991.98px){
+            .oval_section { background-size: 1100px auto; }
+        }
+        .oval_section_primary { background-image: url(../img/oval-primary.png); min-height: 300px; }
+        .oval_section_primary_full { background-image: url(../img/oval-primary.png), linear-gradient(to bottom, transparent 0%, transparent 300px, var(--primary) 300px); }
+        .oval_body { position: relative; padding-block: 10%; }
+        .section_top_signboard { position: absolute; top: 0; left: 50%; transform: translate(-50%,-30%); }
 
+
+    
+    /*=== signboard ===*/
+        .signboard { display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; height: 90px; font-size: var(--fs-h2); font-weight: bold; border: 5px solid var(--primary); border-radius: 100vmax; padding: 0 30px; background: white; color: var(--dark); }
+        .signboard::before,
+        .signboard::after { content: ''; display: block; margin-inline: 38px; width: 38px; height: 38px; background: center center no-repeat; background-size: contain; }
+        
+        .signboard_sm { height: 60px; font-size: var(--fs-h3); padding: 0 10px; }
+        .signboard_sm::before,
+        .signboard_sm::after { width: 20px; height: 20px; margin-inline: 20px; }
+
+        .signboard_primary { border-color: var(--primary); }
+        .signboard_primary::before,
+        .signboard_primary::after { background-image: url(../img/icon/DiamondStar-primary.svg); }
+
+        .signboard_secondary { border-color: var(--secondary); }
+        .signboard_secondary::before,
+        .signboard_secondary::after { background-image: url(../img/icon/DiamondStar-secondary.svg); }
+
+        @media (max-width: 991.98px){
+            .signboard { height: 42px; padding: 0 8px; }
+            .signboard::before,
+            .signboard::after { margin-inline: 12px; width: 20px; height: 20px; }
+        }
+
+
+    /*=== banner_block ===*/
+        .banner_block { width: 100%; aspect-ratio: 11/6; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; padding-block: min(18%, 220px) min(22%, 380px); margin-bottom: calc(-1 * min(14%, 260px)); max-height: 800px;
+            background: center bottom no-repeat; background-size: cover; background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/index-banner.png); color: white; }
+        .banner_title { font-size: var(--fs-h1); font-weight: bold; }
+        @media (max-width: 991.98px){
+            .banner_block { background-position: center top; background-size: 170%; padding-block: 0 15%; max-height: 400px; }
+        }
 
 
 /*######### [Pages] #########*/
     /*====== [Include Page] ======*/
         /*=== header ===*/
             header { position: fixed; display: flex; top: 0; left: max(0px, calc((100% - 1920px) / 2)); right: 0; width: min(100%, 1920px); z-index: 11; }
-            header > .navbar { margin-left: auto; display: inline-flex; background: white; border: 3px solid var(--primary); border-right: 0; border-radius: 100vmax 0 0 100vmax; margin-top: 40px; padding-inline: 24px; }
+            header > .navbar { height: var(--header-height); margin-left: auto; display: inline-flex; background: white; border: 3px solid var(--primary); border-right: 0; border-radius: 100vmax 0 0 100vmax; margin-top: 40px; padding: 0 24px; }
             header .navbar-brand { position: absolute; width: 180px; top: 0; left: 16px; border-radius: 0 0 100vmax 100vmax; background: white; padding: 15px 20px 35px 20px; 
                 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); backdrop-filter: blur(10px); z-index: 9; }
             .header_icons_group { display: flex; padding-left: 16px; }
             .header_icons_group > * { margin-left: 8px; }
             .header_icon { --size: 40px; display: flex; align-items: center; justify-content: center; width: var(--size); height: var(--size); border-radius: 100vmax; }
-            .header_icon._lang { border: 2px solid var(--primary); color: var(--primary); font-weight: bold; }
+            .header_icon._lang { border: 2px solid var(--primary); color: var(--primary); font-weight: bold; width: auto; padding-inline: 12px; }
 
-            .navbar-collapse > .navbar-nav > .nav-item > .nav-link { display: inline-flex; align-items: center; justify-content: center; color: var(--primary); padding-inline: 16px; font-size: 20px; font-weight: bold; }
+            .navbar-collapse > .navbar-nav > .nav-item > .nav-link { display: inline-flex; align-items: center; justify-content: center; color: var(--primary); padding: 16px; font-size: 20px; font-weight: bold; }
             .navbar-collapse > .navbar-nav > .nav-item > .nav-link::before { content: ''; display: block; margin-right: 6px; width: 20px; height: 20px; background: url(../img/icon/DiamondStar-primary.svg) center center no-repeat; }
             .navbar-toggler { border: 0; padding: 4px; margin-left: 12px; }
             @media (max-width: 991.98px){
@@ -190,9 +226,28 @@ Structure instruction：
                 header .navbar-brand { width: 100px; }
             }
 
+            .dropdown-toggle::after { content: "\f078"; font-family: var(--ff-FontAwesome); font-weight: 900; font-size: 0.6em; border: none; margin-left: 0.5em; }
+            .dropdown-menu { border: none; padding: 10px 20px; border-radius: 0px 0px 15px 15px; }
+            .dropdown-menu .dropdown-item { font-size: var(--fs-h4); padding: 6px 10px; text-align: center; }
+
+            .dropdown-menu._menu { background: var(--primary); }
+            .dropdown-menu._menu .dropdown-item { background: var(--primary); color: white; }
+            @media (min-width: 992px){
+                .dropdown-menu._menu > * + * { border-top: 1px solid white; }
+            }
+            @media (max-width: 991.98px){
+                .dropdown-menu._menu { background: transparent; padding-top: 0; margin-top: 0; }
+                .dropdown-menu._menu .dropdown-item { background: transparent; color: var(--dark); }
+            }
+
+            .dropdown-menu._lang { border: none; border-radius: 15px; background: rgba(255,255,255,0.9); min-width: auto; }
+            .dropdown-menu._lang .dropdown-item { background: transparent; color: var(--dark); font-size: var(--fs-h5); }
+            
+
+
 
         /*=== footer ===*/
-            footer { position: relative; z-index: 10; margin-top: -12px; background: white; border-radius: 25px 25px 0px 0px; padding: 15px 60px; font-size: var(--fs-h4); }
+            footer { position: relative; z-index: 10; margin-top: -16px; background: white; border-radius: 25px 25px 0px 0px; padding: 15px 60px; font-size: var(--fs-h5); }
             footer .info_blocks { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; row-gap: 10px; }
             footer .info_blocks > * { padding-inline: 24px; display: flex; align-items: center; white-space: nowrap; }
             footer .info_blocks > * + * { border-left: 1px solid var(--border); }
@@ -217,7 +272,7 @@ Structure instruction：
             .index_banner_block > img { min-width: 600px; }
             .opacity_pill_block { display: inline-block; padding: 16px 32px; border-radius: 100vmax; font-weight: bold; background: rgba(255,255,255,0.3); text-align: center; }
 
-            .sponsors_block { padding: 16px 32px; display: flex; flex-wrap: wrap; justify-content: center; font-size: var(--fs-h4); border-radius: 100vmax; background: white; color: #666; }
+            .sponsors_block { padding: 16px 32px; display: flex; flex-wrap: wrap; justify-content: center; font-size: var(--fs-h5); border-radius: 100vmax; background: white; color: #666; }
             .sponsors_block > * { padding-inline: 32px; }
             .sponsors_block > * + * { border-left: 1px solid var(--border); }
             .sponsors_block ._logos { display: flex; align-items: center; justify-content: center; column-gap: 32px; height: 92px; }
