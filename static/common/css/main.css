@@ -75,6 +75,7 @@ Structure instruction：
         label { margin-bottom: 0; }
         hr { opacity: 1; border-top-color: var(--border); }
         input[type=checkbox], input[type=radio] { accent-color: var(--dark); width: 1em; height: 1em; }
+        h1, h2, h3, h4 { margin-bottom: 0; }
 
 
 /*######### [Plugins] #########*/
@@ -83,7 +84,6 @@ Structure instruction：
             .breadcrumb-item { --bs-breadcrumb-item-active-color: white; color: white; display: flex; align-items: center; }
             .breadcrumb-item a { color: white; }
             .breadcrumb-item + .breadcrumb-item::before { --bs-breadcrumb-divider-color: white; content: '\f054'; font-family: var(--ff-FontAwesome); font-weight: bold; font-size: 10px; vertical-align: middle; }
-
             button:focus { box-shadow: none !important; }
             .btn { 
                 --bs-btn-focus-box-shadow: transparent; display: inline-flex; align-items: center; justify-content: center;
@@ -152,26 +152,47 @@ Structure instruction：
             .bg_deco_block { position: absolute; left: 0; right: 0; bottom: 0; height: 360px; background: url(../img/bg_deco.png) center center no-repeat; background-size: cover; }
 
 
-        /*=== img ===*/
-            .deco_L { width: 76px; aspect-ratio: 1/1; background: url(../img/icon/bling-L.svg) center center no-repeat; background-size: contain; }
-            .deco_R { width: 76px; aspect-ratio: 1/1; background: url(../img/icon/bling-R.svg) center center no-repeat; background-size: contain; }
+        /*=== deco ===*/
+            .deco_bling_L { width: 76px; aspect-ratio: 1/1; background: url(../img/icon/bling-L.svg) center center no-repeat; background-size: contain; }
+            .deco_bling_R { width: 76px; aspect-ratio: 1/1; background: url(../img/icon/bling-R.svg) center center no-repeat; background-size: contain; }
             @media (max-width: 991.98px){
-                .deco_L { width: 30px; background-image: url(../img/icon/bling-sm-L.svg); }
-                .deco_R { width: 30px; background-image: url(../img/icon/bling-sm-R.svg); }
+                .deco_bling_L { width: 30px; background-image: url(../img/icon/bling-sm-L.svg); }
+                .deco_bling_R { width: 30px; background-image: url(../img/icon/bling-sm-R.svg); }
             }
+
+            .deco_pill { width: 650px; display: flex; flex-direction: column; row-gap: 120px; }
+            .deco_pill::before, 
+            .deco_pill::after { content: ''; position: relative; display: block; width: 100%; border-radius: 100vmax; background-color: rgba(0, 106, 255, 0.07); transform: rotate(-41deg); }
+            .deco_pill::before { height: 230px; }
+            .deco_pill::after { height: 140px; }
+            @media (max-width: 991.98px){
+                .deco_pill { row-gap: 60px; }
+                .deco_pill::before { height: 130px; }
+                .deco_pill::after { height: 70px; }
+            }
+
 
 
     /*====== [Components] ======*/
         /*=== oval ===*/
+        .oval_section_block { margin-top: -300px; }
         .oval_section { position: relative; color: white; background: top center no-repeat; background-size: 1920px auto; }
         @media (max-width: 991.98px){
             .oval_section { background-size: 1100px auto; }
         }
-        .oval_section_primary { background-image: url(../img/oval-primary.png); min-height: 300px; }
-        .oval_section_primary_full { background-image: url(../img/oval-primary.png), linear-gradient(to bottom, transparent 0%, transparent 300px, var(--primary) 300px); }
-        .oval_body { position: relative; padding-block: min(10%, 120px) calc(-1 * var(--footer-mt)); }
-        .section_top_signboard { position: absolute; top: 0; left: 50%; transform: translate(-50%,-30%); }
 
+        .oval_section_primary { background-image: url(../img/oval-primary.png); height: 720px; }
+        .oval_section_primary_full { background-image: url(../img/oval-primary.png), linear-gradient(to bottom, transparent 0%, transparent 300px, var(--primary) 300px); }
+        .oval_section_secondary { background-image: url(../img/oval-secondary.png); height: 720px; }
+        .oval_section_secondary_full { background-image: url(../img/oval-secondary.png), linear-gradient(to bottom, transparent 0%, transparent 300px, var(--secondary) 300px); }
+
+        .oval_section .oval_body { position: relative; height: 100%; padding-block: min(10%, 120px) calc(-1 * var(--footer-mt)); min-height: 300px; }
+        .oval_section .section_top_signboard { position: absolute; top: 0; left: 50%; transform: translate(-50%,-30%); }
+        @media (max-width: 991.98px){
+            .oval_section_primary, 
+            .oval_section_secondary { min-height: 410px; height: auto; background-size: cover; }
+            .oval_section .oval_body { padding-block: clamp(42px, 10%, 60px); }
+        }
 
     
     /*=== signboard ===*/
@@ -199,12 +220,13 @@ Structure instruction：
 
 
     /*=== banner_block ===*/
-        .banner_block { width: 100%; aspect-ratio: 11/6; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; padding-block: min(18%, 220px) min(22%, 380px); margin-bottom: calc(-1 * min(14%, 260px)); max-height: 800px;
+        .banner_block { min-height: 700px; width: 100%; aspect-ratio: 11/6; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; padding-block: min(10%, 200px) min(30%, 350px); max-height: 800px;
             background: center bottom no-repeat; background-size: cover; background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/index-banner.png); color: white; }
-        .banner_title { font-size: var(--fs-h1); font-weight: bold; }
+        .banner_title { font-size: var(--fs-h1); font-weight: bold; margin-bottom: .5rem; }
         @media (max-width: 991.98px){
-            .banner_block { background-position: center top; background-size: 170%; padding-block: 0 15%; max-height: 400px; }
+            .banner_block { background-position: center top; background-size: 170%; padding-block: 0 300px; min-height: 470px; margin-bottom: -300px; }
         }
+
 
 
 /*######### [Pages] #########*/
@@ -320,6 +342,31 @@ Structure instruction：
                 .apply_deco_pos_L { top: max(80px, 15vw); }
                 .apply_deco_pos_R { top: max(80px, 15vw); }
             }
+
+
+        /*=== intro ===*/
+            .intro_img_block { --bg: #fff; border-radius: 15px; width: 100%; aspect-ratio: 4/3; background: var(--bg); overflow: hidden; }
+            .intro_img_block > img { width: 100%; height: 100%; object-fit: cover; }
+
+            .intro_deco_pill_pos_L { position: absolute; left: -300px; bottom: 150px; }
+            .intro_deco_pill_pos_R { position: absolute; right: -300px; top: 350px; }
+            @media (max-width: 991.98px){
+                .intro_deco_pill_pos_L { left: -450px; bottom: 150px; }
+                .intro_deco_pill_pos_R { right: -450px; top: 50px; }
+            }
+
+            .intro_section_activity { position: relative; overflow: hidden; background: #F1F8FF; padding-top: 340px; padding-bottom: 360px; margin-top: -300px; z-index: -1; }
+            .intro_activity_img_block { position: relative; height: 740px; display: flex; flex-direction: column; align-items: center; justify-content: center; row-gap: 30px; margin-top: 24px; }
+            .intro_activity_img1 { width: auto; max-width: 100%; position: absolute; left: 0; top: 0px; }
+            .intro_activity_img2 { width: auto; max-width: 100%; position: absolute; right: 0; top: 70px; }
+            .intro_activity_img3 { width: auto; max-width: 100%; position: absolute; left: 50%; top: 360px; transform: translateX(-50%) }
+            @media (max-width: 991.98px){
+                .intro_activity_img_block { height: auto; }
+                .intro_activity_img1 { width: 320px; position: static; }
+                .intro_activity_img2 { width: 320px; position: static; }
+                .intro_activity_img3 { width: 320px; position: static; transform: none; }
+            }
+            .intro_row_cols_2 { align-items: center; max-width: 900px; line-height: 1.77; margin-inline: auto; }
 
 
 
