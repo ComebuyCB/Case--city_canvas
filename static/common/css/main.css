@@ -170,7 +170,6 @@ Structure instruction：
         .oval_section_primary { background-image: url(../img/oval-primary.png); min-height: 300px; }
         .oval_section_primary_full { background-image: url(../img/oval-primary.png), linear-gradient(to bottom, transparent 0%, transparent 300px, var(--primary) 300px); }
         .oval_body { position: relative; padding-block: min(10%, 120px) calc(-1 * var(--footer-mt)); }
-        .oval_body_bottom { display: block; height: 120px; }
         .section_top_signboard { position: absolute; top: 0; left: 50%; transform: translate(-50%,-30%); }
 
 
