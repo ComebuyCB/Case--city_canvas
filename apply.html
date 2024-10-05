@@ -9,21 +9,24 @@
     <link rel="icon" type="image/png" sizes="32x32" href="">
     <link rel="icon" type="image/png" sizes="96x96" href="">
 
-    <title>參展報名 - 圖圖巷弄 CITY CANVAS</title>
+    <title>2025亞洲原創角色節—Asia Licensing Week</title>
 
     <!-- core -->
     <script src="static/core/jquery-3.5.1/jquery-3.5.1.min.js"></script>
     <link href="static/core/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="static/core/bootstrap-5.3.2/js/bootstrap.bundle.min.js"></script>
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/i18next/22.5.0/i18next.min.js" ></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-i18next/1.2.1/jquery-i18next.min.js" ></script>
     <!-- plugins -->
     <link href="static/plugins/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet">
 
     <!-- main -->
     <link href="static/common/css/main.css" rel="stylesheet">
-    <script src="static/common/js/main.js"></script>
+    <script src="static/common/js/lan.js?t=4"></script>
+    <script src="static/common/js/main.js?t=3"></script>
 </head>
 <body>
+    <div class="loading"><p>Loading...</p></div>
     <div id="wrap" class="i18lan">
         <header>
             <script>$.get('include/header.html', (res)=>{ $('header')[0].outerHTML = res })</script>
@@ -31,11 +34,11 @@
 
         <main>
             <div class="banner_block">
-                <h1 class="banner_title">參展報名</h1>
+                <h1 class="banner_title" data-i18n="nav.n3">參展報名</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">參展報名</li>
+                        <li class="breadcrumb-item active" aria-current="page" data-i18n="nav.n3">參展報名</li>
                     </ol>
                 </nav>
             </div>
@@ -44,78 +47,78 @@
                     <div class="apply_deco_pos_L deco_bling_L"></div>
                     <div class="apply_deco_pos_R deco_bling_R"></div>
                     <div class="bg_deco_block"></div>
-                    <h2 class="section_top_signboard signboard signboard_primary">報名資訊</h2>
+                    <h2 class="section_top_signboard signboard signboard_primary"  data-i18n="forms.f16"></h2>
                     <div class="oval_body container">
-                        <div class="fs-h3 fw-bold text-center mb-4 mb-sm-5 px-5 px-md-0">
-                            請填寫報名資訊，STANCAVE 業務專員將於兩個工作日內與您聯繫，謝謝。
+                        <div class="fs-h3 fw-bold text-center mb-4 mb-sm-5 px-5 px-md-0" data-i18n="forms.f17">
+                            
                         </div>
                         <div class="mx-auto ch-gy-4 px-5" style="max-width: 680px;">
                             <div class="">
-                                <div class="form-label">申請單位名稱* </div>
-                                <input type="text" class="form-control">
+                                <div class="form-label" data-i18n="forms.n1">業務承辦人員* </div>
+                                <input type="text" class="form-control" id="org_title">
                             </div>
                             <div class="">
-                                <div class="form-label">負責人姓名* </div>
-                                <input type="text" class="form-control">
+                                <div class="form-label"  data-i18n="forms.n2">負責人姓名* </div>
+                                <input type="text" class="form-control" id="org_person_in_charge">
                             </div>
                             <div class="">
-                                <div class="form-label">聯絡電話* </div>
-                                <input type="text" class="form-control">
+                                <div class="form-label"  data-i18n="forms.n3">聯絡電話* </div>
+                                <input type="text" class="form-control" id="org_contact_no">
                             </div>
                             <div class="">
-                                <div class="form-label">電子信箱* </div>
-                                <input type="text" class="form-control">
+                                <div class="form-label"  data-i18n="forms.n4">電子信箱* </div>
+                                <input type="text" class="form-control" id="email">
                             </div>
                             <div class="">
                                 <div class="form-label">Line ID </div>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" id="line_id">
                             </div>
                             <div class="">
-                                <div class="form-label">品牌名稱* </div>
-                                <input type="text" class="form-control">
+                                <div class="form-label"  data-i18n="forms.n6">品牌名稱* </div>
+                                <input type="text" class="form-control" id="brand_title">
                             </div>
                             <div class="">
-                                <div class="form-label">販售商品/服務類型* </div>
-                                <input type="text" class="form-control">
+                                <div class="form-label"  data-i18n="forms.n7">販售商品/服務類型* </div>
+                                <input type="text" class="form-control" id="service_type">
                             </div>
                             <div class="">
-                                <div class="form-label">欲洽詢攤位格數* </div>
-                                <input type="text" class="form-control">
+                                <div class="form-label"  data-i18n="forms.n8">欲洽詢攤位格數* </div>
+                                <input type="text" class="form-control" id="stall_count">
                             </div>
                             <div class="">
-                                <div class="form-label">欲洽詢攤位規格* </div>
+                                <div class="form-label"  data-i18n="forms.n18">欲洽詢攤位規格* </div>
                                 <div class="ps-2 ch-gy-1">
                                     <div>
                                         <label class="d-inline-flex flex-center-a">
-                                            <input type="checkbox" class="me-2">
-                                            <div>3mx3m 淨地 NT 39,500（早鳥優惠 NT 35,550）</div>
+                                            <input type="checkbox" class="me-2"  data-key="sp1">
+                                            <div data-i18n="forms.n9">3mx3m 淨地 NT 39,500（早鳥優惠 NT 35,550）</div>
                                         </label>
                                     </div>
                                     <div>
                                         <label class="d-inline-flex flex-center-a">
-                                            <input type="checkbox" class="me-2">
-                                            <div>3mx3m 標準攤位 NT 44,500（早鳥優惠 NT 40,050）</div>
+                                            <input type="checkbox" class="me-2"  data-key="sp2">
+                                            <div data-i18n="forms.n10">3mx3m 標準攤位 NT 44,500（早鳥優惠 NT 40,050）</div>
                                         </label>
                                     </div>
                                     <div>
                                         <label class="d-inline-flex flex-center-a">
-                                            <input type="checkbox" class="me-2">
-                                            <div>3mx3m 戶外攤位 NT 15,000（早鳥優惠 NT 13,500）</div>
+                                            <input type="checkbox" class="me-2"  data-key="sp3">
+                                            <div data-i18n="forms.n11">3mx3m 戶外攤位 NT 15,000（早鳥優惠 NT 13,500）</div>
                                         </label>
                                     </div>
                                     <div>
                                         <label class="d-inline-flex flex-center-a">
-                                            <input type="checkbox" class="me-2">
-                                            <div>1.5mx1m 市集攤位 NT 9,000（早鳥優惠 NT 8,100）</div>
+                                            <input type="checkbox" class="me-2"  data-key="sp4">
+                                            <div data-i18n="forms.n12">1.5mx1m 市集攤位 NT 9,000（早鳥優惠 NT 8,100）</div>
                                         </label>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="submit_at_bottom mt-4 mt-lg-5">
-                            <button class="btn rounded-0 half_circle_submit_btn mx-auto">
+                            <button class="btn rounded-0 half_circle_submit_btn mx-auto" onclick="javascript:submits()">
                                 <img src="static/common/img/icon/mouseClick.svg">
-                                <div class="mt-1">提交</div>
+                                <div class="mt-1" data-i18n="forms.n13">提交</div>
                             </button>
                         </div>
                     </div>
@@ -129,3 +132,119 @@
     </div>
 </body>
 </html>
+
+
+<script>
+    var phonePattern = /^[0-9]{8,10}$/;
+    var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    function submits(){
+
+        if ($('#org_title').val().trim() === '') {
+            alert(i18next.t('forms.f14')+i18next.t('forms.f1'));
+            return
+        }
+
+        if ($('#org_person_in_charge').val().trim() === '') {
+            alert(i18next.t('forms.f14')+i18next.t('forms.f2'));
+            return
+        }
+
+        if ($('#org_contact_no').val().trim() === '') {
+            alert(i18next.t('forms.f14')+i18next.t('forms.f3'));
+            return
+        }
+        if (!phonePattern.test($('#org_contact_no').val())) {
+            alert(i18next.t('forms.f20'));
+            return 
+        }
+        
+
+        if ($('#email').val().trim() === '') {
+            alert(i18next.t('forms.f14')+i18next.t('forms.f4'));
+
+            return
+        }
+        if (!emailPattern.test($('#email').val())) {
+            alert(i18next.t('forms.f19'));
+
+            return false; // 中止請求
+        }
+
+        if ($('#brand_title').val().trim() === '') {
+            alert(i18next.t('forms.f14')+i18next.t('forms.f6'));
+
+            return
+        }
+
+        if ($('#service_type').val().trim() === '') {
+            alert(i18next.t('forms.f14')+i18next.t('forms.f7'));
+            return
+        }
+
+        if ($('#stall_count').val().trim() === '') {
+            alert(i18next.t('forms.f14')+i18next.t('forms.f8'));
+            return
+        }
+
+        // 檢查是否至少勾選一個 checkbox
+        if ($('input[type="checkbox"]:checked').length === 0) {
+            alert(i18next.t('forms.f15')+i18next.t('forms.f18'));
+            return
+        }
+        $('.loading').css('display', 'flex');
+        $.ajax({
+            url: '//backend.zheng.fuyuki.work/api/apply/create',
+            type: 'POST',
+            data: {
+                org_title: $('#org_title').val(),
+                org_person_in_charge: $('#org_person_in_charge').val(),
+                org_contact_no: $('#org_contact_no').val(),
+                email: $('#email').val(),
+                line_id: $('#line_id').val(),
+                brand_title: $('#brand_title').val(),
+                service_type: $('#service_type').val(),
+                stall_count: $('#stall_count').val(),
+                stall_specification: JSON.stringify($('input[type="checkbox"]:checked').map(function() {
+                        return $(this).data('key');  // 只返回 data-key 的值
+                    }).get())
+            },
+            error: function (xhr) {
+                $('.loading').css('display', 'none');
+                alert('Ajax request');
+            },
+            success: function (obj) {        
+                $('.loading').css('display', 'none');
+                alert(i18next.t('forms.f21'));
+                if (obj.status == 1) {
+                
+                    
+                } else {
+                    alert(dates.Msg)
+                }
+            }
+        })
+
+
+    }
+
+</script>
+
+<style>
+   .loading {
+        display: none;
+        position: fixed; 
+        top: 0;
+        left: 0;
+        width: 100%; 
+        height: 100%; 
+        background: rgba(0, 0, 0, 0.5); 
+        align-items: center; 
+        justify-content: center; 
+        z-index: 9999; 
+    }
+
+    .loading p {
+        color: white; 
+        font-size: 24px; 
+    }
+</style>

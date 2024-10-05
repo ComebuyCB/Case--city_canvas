@@ -69,3 +69,5 @@ function setLan(lans){
     setLocalStorageItem('lan',obj,500)
     window.location.reload();
 }
+
+

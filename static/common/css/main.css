@@ -221,7 +221,7 @@ Structure instruction：
 
     /*=== banner_block ===*/
         .banner_block { min-height: 700px; width: 100%; aspect-ratio: 11/6; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; padding-block: min(10%, 200px) min(30%, 350px); max-height: 800px;
-            background: center bottom no-repeat; background-size: cover; background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/index-banner.png); color: white; }
+            background: center bottom no-repeat; background-size: cover; background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/index-banner.jpg); color: white; }
         .banner_title { font-size: var(--fs-h1); font-weight: bold; margin-bottom: .5rem; }
         @media (max-width: 991.98px){
             .banner_block { background-position: center top; background-size: 170%; padding-block: 0 300px; min-height: 470px; margin-bottom: -300px; }
@@ -276,7 +276,7 @@ Structure instruction：
             .dropdown-menu._lang .dropdown-item { background: transparent; color: var(--dark); font-size: var(--fs-h5); }
             
 
-
+            
 
         /*=== footer ===*/
             footer { position: relative; z-index: 10; margin-top: var(--footer-mt); background: white; border-radius: 25px 25px 0px 0px; padding: 15px 60px; font-size: var(--fs-h5); }
@@ -308,6 +308,14 @@ Structure instruction：
             .sponsors_block > * { padding-inline: 32px; }
             .sponsors_block > * + * { border-left: 1px solid var(--border); }
             .sponsors_block ._logos { display: flex; align-items: center; justify-content: center; column-gap: 32px; height: 92px; }
+            .sponsors_block ._logos_p {     
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 16px;
+                font-size: 18px;
+                font-weight: bold;}
+
             @media (max-width: 1199.98px){
                 .sponsors_block { max-width: 500px; margin-inline: auto; padding: 0px 24px; border-radius: 24px; column-gap: 36px; }
                 .sponsors_block > * { padding: 16px 0; }
