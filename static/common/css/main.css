@@ -224,7 +224,7 @@ Structure instruction：
             background: center bottom no-repeat; background-size: cover; background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/index-banner.jpg); color: white; }
         .banner_title { font-size: var(--fs-h1); font-weight: bold; margin-bottom: .5rem; }
         @media (max-width: 991.98px){
-            .banner_block { background-position: center top; background-size: 170%; padding-block: 0 300px; min-height: 470px; margin-bottom: -300px; }
+            .banner_block { background-position: 50% 166%; background-size: 170%; padding-block: 0 300px; min-height: 470px; margin-bottom: -300px; }
         }
 
 
