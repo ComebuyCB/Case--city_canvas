@@ -56,6 +56,7 @@ $(document).ready(function(){
 	if(objs!=null){
 		lan=objs.Msg;
 	}
+    console.log(lan)
     initi18()
  });
 

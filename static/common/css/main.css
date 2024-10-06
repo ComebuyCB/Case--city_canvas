@@ -66,6 +66,10 @@ Structure instruction：
         html { scroll-behavior: smooth; }
         body { font-family: 'Inter', var(--ff-default), 'Microsoft JhengHei', sans-serif; font-size: var(--fs-p); }
         #wrap { display: flex; flex-direction: column; margin-inline: auto; min-height: 100vh; min-height: 100dvh; max-width: 1920px; }
+        @media (max-width: 991.98px){
+            #wrap {overflow-x: hidden;}
+
+        }
         main { flex-grow: 1; }
 
 
@@ -200,7 +204,7 @@ Structure instruction：
         .signboard::before,
         .signboard::after { content: ''; display: block; margin-inline: 38px; width: 38px; height: 38px; background: center center no-repeat; background-size: contain; }
         
-        .signboard_sm { height: 60px; font-size: var(--fs-h3); padding: 0 10px; }
+        .signboard_sm { height: 60px; font-size: var(--fs-h4); padding: 0 10px; }
         .signboard_sm::before,
         .signboard_sm::after { width: 20px; height: 20px; margin-inline: 20px; }
 
@@ -221,10 +225,10 @@ Structure instruction：
 
     /*=== banner_block ===*/
         .banner_block { min-height: 700px; width: 100%; aspect-ratio: 11/6; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; padding-block: min(10%, 200px) min(30%, 350px); max-height: 800px;
-            background: center bottom no-repeat; background-size: cover; background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/index-banner.jpg); color: white; }
+            background: center bottom no-repeat; background-size: cover; background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/other.jpg); color: white; }
         .banner_title { font-size: var(--fs-h1); font-weight: bold; margin-bottom: .5rem; }
         @media (max-width: 991.98px){
-            .banner_block { background-position: 50% 166%; background-size: 170%; padding-block: 0 300px; min-height: 470px; margin-bottom: -300px; }
+            .banner_block { background-position: top center; background-size: 170%; padding-block: 0 300px; min-height: 470px; margin-bottom: -300px; }
         }
 
 
@@ -313,7 +317,7 @@ Structure instruction：
                 align-items: center;
                 justify-content: center;
                 padding: 16px;
-                font-size: 18px;
+                font-size: 1.125rem;
                 font-weight: bold;}
 
             @media (max-width: 1199.98px){
@@ -326,6 +330,7 @@ Structure instruction：
             }
             @media (max-width: 991.98px){
                 .sponsors_block ._logos { height: 60px; }
+                .sponsors_block ._logos_p {font-size: .875rem; }
             }
 
             .index_deco_pos_L { position: absolute; left: max(calc((100% - 800px) / 4), 5vw); top: 100px; }

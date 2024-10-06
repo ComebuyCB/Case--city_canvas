@@ -1,14 +1,15 @@
+var selectlan
 function initi18(){
-    var lans
+    
    if(lan=='zh-cn'){
-    lans='cn'
+    selectlan='cn'
    }else if(lan=='zh-tw'){
-    lans='tw'
-   }else{lans=lan}
-   $('#lanshow').html(lans.toUpperCase())
+    selectlan='tw'
+   }else{selectlan=lan}
+   $('#lanshow').html(selectlan.toUpperCase())
     i18next.init({
         // debug: true,
-        lng: lans, 
+        lng: selectlan, 
         resources: { 
           en: {
             translation: {
@@ -17,7 +18,7 @@ function initi18(){
                 index1:'organizer',
                 index2:'execution unit',
                 index3:'Event date',
-                footer1:'Customer service hours: Monday ~ Friday 9:00 - 18:00',
+                footer1:'Customer service hours: Mon ~ Fri 9:00 - 18:00',
                 footer2:'Organizer: 同人誌數位有限公司'
               },
               nav:{
@@ -27,9 +28,6 @@ function initi18(){
                 n3:'Exhibit',
                 n4:'FAQ',
                 n5:'Exhibitor List'
-              },
-              footer:{
-                txt:'<p>台北總公司  23586 新北市中和區中正路880號14樓之5</p><p>電話：02-8227-7999</p><p>客服專線：0800-221-228</p>'
               }
               ,forms: {
                 f1:'Business Undertaken Personnel',
@@ -74,9 +72,6 @@ function initi18(){
                 n4:'常見問題',
                 n5:'展商名單'
               
-              },
-              footer:{
-                txt:'<p>台北總公司  23586 新北市中和區中正路880號14樓之5</p><p>電話：02-8227-7999</p><p>客服專線：0800-221-228</p>'
               },
               forms: {
                 f1:'業務承辦人員',

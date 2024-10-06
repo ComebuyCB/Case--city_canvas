@@ -29,7 +29,16 @@
     <div class="loading"><p>Loading...</p></div>
     <div id="wrap" class="i18lan">
         <header>
-            <script>$.get('include/header.html', (res)=>{ $('header')[0].outerHTML = res })</script>
+            <script>
+                $.get('include/header.html?v=8', (res) => {
+                    $('header')[0].outerHTML = res;
+                    if ($.fn.localize) {
+                        $('.i18lan').localize();
+                        $('#lanshow').html(selectlan.toUpperCase())
+                    } 
+                  
+                });
+            </script>
         </header>
 
         <main>
@@ -143,7 +152,13 @@
         </main>
 
         <footer>
-            <script>$.get('include/footer.html', (res)=>{ $('footer')[0].outerHTML = res })</script>
+            <script>$.get('include/footer.html?v=7', (res)=>{ 
+                $('footer')[0].outerHTML = res; 
+                if ($.fn.localize) {
+                    $('.i18lan').localize();
+                } 
+                })
+            </script>
         </footer>
     </div>
 </body>
