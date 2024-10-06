@@ -377,6 +377,16 @@ Structure instruction：
             .intro_row_cols_2 { align-items: center; max-width: 900px; line-height: 1.77; margin-inline: auto; }
 
 
+            /*=== ticket.html ===*/
+                .ticket_block { display: flex; flex-direction: column; flex-wrap: wrap; justify-content: center; text-align: center; }
+                .ticket_block ._title {  }
+                .ticket_block ._body { flex-grow: 1; margin-top: -57px; padding: 20px; background: var(--primary); border-radius: 15px; border: 3px solid #FFF; z-index: 1; }
+                .ticket_block ._body._white { background: white; color: var(--dark); }
+
+                .ticket_time_title { font-size: 30px; text-align: center; }
+                .ticket_time_title ._date { font-size: 48px; }
+                
+
 
 /*###### [Note] ######*/
 /* Mobile() -> PC */
