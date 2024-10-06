@@ -19,7 +19,8 @@ function initi18(){
                 index2:'execution unit',
                 index3:'Event date',
                 footer1:'Customer service hours: Mon ~ Fri 9:00 - 18:00',
-                footer2:'Organizer: 同人誌數位有限公司'
+                footer2:'Organizer: 同人誌數位有限公司',
+                news:'Exhibition News'
               },
               nav:{
                 n0:'Introduction',
@@ -62,7 +63,8 @@ function initi18(){
                 index2:'執行單位',
                 index3:'活動日期' ,
                 footer1:'客服時間：周一 ~ 周五 9:00 - 18:00',
-                footer2:'主辦單位：同人誌數位有限公司'
+                footer2:'主辦單位：同人誌數位有限公司',
+                news:'大會消息'
               },
               nav:{
                 n0:'展會介紹',
