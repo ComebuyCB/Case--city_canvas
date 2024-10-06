@@ -22,15 +22,15 @@
     <link href="static/plugins/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet">
 
     <!-- main -->
-    <link href="static/common/css/main.css" rel="stylesheet">
-    <script src="static/common/js/lan.js"></script>
-    <script src="static/common/js/main.js"></script>
+    <link href="static/common/css/main.css?v=10" rel="stylesheet">
+    <script src="static/common/js/lan.js?v=10"></script>
+    <script src="static/common/js/main.js?v=10"></script>
 </head>
 <body>
     <div class="loading"><p>Loading...</p></div>
     <div id="wrap" class="i18lan">
         <header>
-            <script>$.get('include/header.html', (res)=>{ $('header')[0].outerHTML = res })</script>
+           
         </header>
 
         <main>
@@ -55,19 +55,19 @@
                         </div>
                         <div class="mx-auto ch-gy-4 px-5" style="max-width: 680px;">
                             <div class="">
-                                <div class="form-label" data-i18n="forms.n1">業務承辦人員* </div>
+                                <div class="form-label" data-i18n="forms.f1">業務承辦人員* </div>
                                 <input type="text" class="form-control" id="org_title">
                             </div>
                             <div class="">
-                                <div class="form-label"  data-i18n="forms.n2">負責人姓名* </div>
+                                <div class="form-label"  data-i18n="forms.f2">負責人姓名* </div>
                                 <input type="text" class="form-control" id="org_person_in_charge">
                             </div>
                             <div class="">
-                                <div class="form-label"  data-i18n="forms.n3">聯絡電話* </div>
+                                <div class="form-label"  data-i18n="forms.f3">聯絡電話* </div>
                                 <input type="text" class="form-control" id="org_contact_no">
                             </div>
                             <div class="">
-                                <div class="form-label"  data-i18n="forms.n4">電子信箱* </div>
+                                <div class="form-label"  data-i18n="forms.f4">電子信箱* </div>
                                 <input type="text" class="form-control" id="email">
                             </div>
                             <div class="">
@@ -75,42 +75,42 @@
                                 <input type="text" class="form-control" id="line_id">
                             </div>
                             <div class="">
-                                <div class="form-label"  data-i18n="forms.n6">品牌名稱* </div>
+                                <div class="form-label"  data-i18n="forms.f6">品牌名稱* </div>
                                 <input type="text" class="form-control" id="brand_title">
                             </div>
                             <div class="">
-                                <div class="form-label"  data-i18n="forms.n7">販售商品/服務類型* </div>
+                                <div class="form-label"  data-i18n="forms.f7">販售商品/服務類型* </div>
                                 <input type="text" class="form-control" id="service_type">
                             </div>
                             <div class="">
-                                <div class="form-label"  data-i18n="forms.n8">欲洽詢攤位格數* </div>
+                                <div class="form-label"  data-i18n="forms.f8">欲洽詢攤位格數* </div>
                                 <input type="text" class="form-control" id="stall_count">
                             </div>
                             <div class="">
-                                <div class="form-label"  data-i18n="forms.n18">欲洽詢攤位規格* </div>
+                                <div class="form-label"  data-i18n="forms.f18">欲洽詢攤位規格* </div>
                                 <div class="ps-2 ch-gy-1">
                                     <div>
                                         <label class="d-inline-flex flex-center-a">
                                             <input type="checkbox" class="me-2"  data-key="sp1">
-                                            <div data-i18n="forms.n9">3mx3m 淨地 NT 39,500（早鳥優惠 NT 35,550）</div>
+                                            <div data-i18n="forms.f9">3mx3m 淨地 NT 39,500（早鳥優惠 NT 35,550）</div>
                                         </label>
                                     </div>
                                     <div>
                                         <label class="d-inline-flex flex-center-a">
                                             <input type="checkbox" class="me-2"  data-key="sp2">
-                                            <div data-i18n="forms.n10">3mx3m 標準攤位 NT 44,500（早鳥優惠 NT 40,050）</div>
+                                            <div data-i18n="forms.f10">3mx3m 標準攤位 NT 44,500（早鳥優惠 NT 40,050）</div>
                                         </label>
                                     </div>
                                     <div>
                                         <label class="d-inline-flex flex-center-a">
                                             <input type="checkbox" class="me-2"  data-key="sp3">
-                                            <div data-i18n="forms.n11">3mx3m 戶外攤位 NT 15,000（早鳥優惠 NT 13,500）</div>
+                                            <div data-i18n="forms.f11">3mx3m 戶外攤位 NT 15,000（早鳥優惠 NT 13,500）</div>
                                         </label>
                                     </div>
                                     <div>
                                         <label class="d-inline-flex flex-center-a">
                                             <input type="checkbox" class="me-2"  data-key="sp4">
-                                            <div data-i18n="forms.n12">1.5mx1m 市集攤位 NT 9,000（早鳥優惠 NT 8,100）</div>
+                                            <div data-i18n="forms.f12">1.5mx1m 市集攤位 NT 9,000（早鳥優惠 NT 8,100）</div>
                                         </label>
                                     </div>
                                 </div>
@@ -119,7 +119,7 @@
                         <div class="submit_at_bottom mt-4 mt-lg-5">
                             <button class="btn rounded-0 half_circle_submit_btn mx-auto" onclick="javascript:submits()">
                                 <img src="static/common/img/icon/mouseClick.svg">
-                                <div class="mt-1" data-i18n="forms.n13">提交</div>
+                                <div class="mt-1" data-i18n="forms.f13">提交</div>
                             </button>
                         </div>
                     </div>
@@ -128,7 +128,7 @@
         </main>
 
         <footer>
-            <script>$.get('include/footer.html', (res)=>{ $('footer')[0].outerHTML = res })</script>
+           
         </footer>
     </div>
 </body>
