@@ -215,12 +215,12 @@
             },
             success: function (obj) {        
                 $('.loading').css('display', 'none');
-                alert(i18next.t('forms.f21'));
-                if (obj.status == 1) {
-                
-                    
+                console.log(obj)
+                if (obj == 0) {
+                    alert(i18next.t('forms.f21'));
+                    location.reload()
                 } else {
-                    alert(dates.Msg)
+                    alert('Error5')
                 }
             }
         })
