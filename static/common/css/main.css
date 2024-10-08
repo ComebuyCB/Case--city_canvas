@@ -394,6 +394,13 @@ Structure instruction：
                 .ticket_deco_bling_pos_R { right: max(calc((100% - 500px) / 4), 8px); top: 24%; }
             }
 
+            .ticket_deco_pill_pos_L { position: absolute; left: -300px; bottom: 0px; }
+            .ticket_deco_pill_pos_R { position: absolute; right: -300px; top: 100px; }
+            @media (max-width: 991.98px){
+                .ticket_deco_pill_pos_L { left: -450px; bottom: -100px; }
+                .ticket_deco_pill_pos_R { right: -450px; top: 150px; }
+            }
+
 
 
 /*###### [Note] ######*/
