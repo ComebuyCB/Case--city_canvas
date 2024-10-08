@@ -70,7 +70,6 @@ Structure instruction：
         #wrap { display: flex; flex-direction: column; margin-inline: auto; min-height: 100vh; min-height: 100dvh; max-width: 1920px; }
         @media (max-width: 991.98px){
             #wrap {overflow-x: hidden;}
-
         }
         main { flex-grow: 1; }
 
@@ -85,6 +84,7 @@ Structure instruction：
         ul > li::marker { color: var(--primary); }
 
 
+
 /*######### [Plugins] #########*/
     /*====== [Plugins Modified] ======*/
         /*=== Bootstrap ===*/
@@ -92,48 +92,14 @@ Structure instruction：
             .breadcrumb-item a { color: white; }
             .breadcrumb-item + .breadcrumb-item::before { --bs-breadcrumb-divider-color: white; content: '\f054'; font-family: var(--ff-FontAwesome); font-weight: bold; font-size: 10px; vertical-align: middle; }
             button:focus { box-shadow: none !important; }
-            .btn { 
-                --bs-btn-focus-box-shadow: transparent; display: inline-flex; align-items: center; justify-content: center;
-            }
-
+            .btn {  --bs-btn-focus-box-shadow: transparent; display: inline-flex; align-items: center; justify-content: center; }
             .form-label { border-left: 7px solid #F6BD00; padding-left: 8px; margin-bottom: 10px; line-height: 1.1; }
             .form-control { height: var(--comp-height); }
 
 
-/*
-            [class*="btn_"] {
-                --default-color: ; --default-bg: ;
-                --hover-color: ; --hover-bg: ;
-                --bs-btn-color: var(--default-color); --bs-btn-bg: var(--default-bg); --bs-btn-border-color: var(--default-bg);
-                --bs-btn-disabled-color: var(--default-color); --bs-btn-disabled-bg: var(--default-bg); --bs-btn-disabled-border-color: var(--default-bg);
-                --bs-btn-hover-color: var(--hover-color); --bs-btn-hover-bg: var(--hover-bg); --bs-btn-hover-border-color: var(--hover-bg);
-                --bs-btn-active-color: var(--hover-color); --bs-btn-active-bg: var(--hover-bg); --bs-btn-active-border-color: var(--hover-bg);
-            }
-            [class*="btn_outline_"] {
-                --default-color: ; --default-bg: ;
-                --hover-color: ; --hover-bg: ;
-                --bs-btn-color: var(--default-color); --bs-btn-bg: transparent; --bs-btn-border-color: var(--default-color);
-                --bs-btn-disabled-color: var(--default-color); --bs-btn-disabled-bg: transparent; --bs-btn-disabled-border-color: var(--default-color);
-                --bs-btn-hover-color: var(--hover-color); --bs-btn-hover-bg: var(--hover-bg); --bs-btn-hover-border-color: var(--hover-bg);
-                --bs-btn-active-color: var(--hover-color); --bs-btn-active-bg: var(--hover-bg); --bs-btn-active-border-color: var(--hover-bg);
-            }
-            .btn_custom { --default-bg: #e75a23; --default-color: white; --hover-bg: #bb4112; --hover-color: white; }
-            .btn_outline_custom { --default-bg: white; --default-color: #e75a23; --hover-bg: #e75a23; --hover-color: white; }
-            .btn_active_darker {
-                --bs-btn-hover-border-color: color-mix(in srgb, var(--bs-btn-hover-bg), black 6%);
-                --bs-btn-active-bg: color-mix(in srgb, var(--bs-btn-hover-bg), black 6%);
-                --bs-btn-active-border-color: color-mix(in srgb, var(--bs-btn-hover-bg), black 12%);
-            }
-            .btn_active_lighter {
-                --bs-btn-hover-border-color: color-mix(in srgb, var(--bs-btn-hover-bg), white 6%);
-                --bs-btn-active-bg: color-mix(in srgb, var(--bs-btn-hover-bg), white 6%);
-                --bs-btn-active-border-color: color-mix(in srgb, var(--bs-btn-hover-bg), white 0%);
-            }
-*/
-
     /*====== [Plugins SelfMade] ======*/
         /*=== js- ===*/
-            
+
 
 
 /*######### [Public Style] #########*/
@@ -149,8 +115,6 @@ Structure instruction：
             .c-primary { color: var(--primary); }
             .c-secondary { color: var(--secondary); }
 
-
-
         /*=== font ===*/
             .fs-h1 { font-size: var(--fs-h1); }
             .fs-h2 { font-size: var(--fs-h2); }
@@ -160,7 +124,6 @@ Structure instruction：
     /*====== [Elements] ======*/
         /*=== bg ===*/
             .bg_deco_block { position: absolute; left: 0; right: 0; bottom: 0; height: 360px; background: url(../img/bg_deco.png) center center no-repeat; background-size: cover; }
-
 
         /*=== deco ===*/
             .deco_bling_L { width: 76px; aspect-ratio: 1/1; background: url(../img/icon/bling-L.svg) center center no-repeat; background-size: contain; }
@@ -180,7 +143,6 @@ Structure instruction：
                 .deco_pill::before { height: 130px; }
                 .deco_pill::after { height: 70px; }
             }
-
 
 
     /*====== [Components] ======*/
@@ -204,7 +166,7 @@ Structure instruction：
             .oval_section .oval_body { padding-inline: 24px; padding-block: clamp(42px, 10%, 60px); }
         }
 
-    
+
     /*=== signboard ===*/
         .signboard { display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; height: 90px; font-size: var(--fs-h2); font-weight: bold; border: 5px solid var(--primary); border-radius: 100vmax; padding: 0 30px; background: white; color: var(--dark); }
         .signboard::before,
@@ -286,7 +248,6 @@ Structure instruction：
             .dropdown-menu._lang .dropdown-item { background: transparent; color: var(--dark); font-size: var(--fs-h5); }
             
 
-            
 
         /*=== footer ===*/
             footer { position: relative; z-index: 10; margin-top: var(--footer-mt); background: white; border-radius: 25px 25px 0px 0px; padding: 15px 60px; font-size: var(--fs-h5); }
@@ -306,6 +267,7 @@ Structure instruction：
             }
 
             .copyright { color: #A6A6A6; text-align: center; }
+
 
 
     /*====== [Current Page] ======*/
@@ -374,8 +336,6 @@ Structure instruction：
                 .intro_deco_pill_pos_R { right: -450px; top: 50px; }
             }
 
-
-
             .intro_deco_bling1_pos_L { position: absolute; left: max(calc((100% - 1100px) / 4), 16px); top: 40%; }
             .intro_deco_bling1_pos_R { position: absolute; right: max(calc((100% - 1100px) / 4), 16px); top: 40%; }
             @media (max-width: 991.98px){
@@ -394,7 +354,6 @@ Structure instruction：
                 .intro_deco_bling2_pos_R { top: max(80px, 15vw); display: none; }
             }
 
-
             .intro_section_activity { position: relative; overflow: hidden; background: var(--background-light); padding-top: 340px; padding-bottom: 360px; margin-top: -300px; z-index: -1; }
             .intro_activity_img_block { position: relative; height: 740px; display: flex; flex-direction: column; align-items: center; justify-content: center; row-gap: 30px; margin-top: 24px; }
             .intro_activity_img1 { width: auto; max-width: 100%; position: absolute; left: 0; top: 0px; }
@@ -409,9 +368,6 @@ Structure instruction：
             .intro_row_cols_2 { align-items: center; max-width: 900px; line-height: 1.77; margin-inline: auto; }
 
 
-
-
-
         /*=== ticket.html ===*/
             .ticket_time_title { font-size: 30px; text-align: center; display: flex; align-items: baseline; justify-content: center; }
             .ticket_time_title ._date { font-size: 48px; font-weight: bold; }
@@ -419,7 +375,7 @@ Structure instruction：
                 .ticket_time_title { font-size: 18px; flex-direction: column; align-items: center; }
                 .ticket_time_title ._date { font-size: 36px; }
             }
-            .ticket_block { display: flex; flex-direction: column; flex-wrap: wrap; justify-content: center; text-align: center; min-height: 360px; }
+            .ticket_block { display: flex; flex-direction: column; flex-wrap: wrap; justify-content: center; text-align: center; min-height: 360px; max-width: 400px; margin-inline: auto; }
             .ticket_block ._title {  margin-bottom: -57px; }
             .ticket_block ._body { flex-grow: 1; font-size: 18px; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; background: var(--primary); border-radius: 15px; border: 3px solid #FFF; line-height: 1.77; }
             .ticket_block ._body._white { border-color: white; background: white; color: var(--dark); }
@@ -429,6 +385,13 @@ Structure instruction：
             .ticket_section_instruction { position: relative; overflow: hidden; background: var(--background-light); padding-top: 340px; padding-bottom: 120px; margin-top: -300px; z-index: -1; }
             @media (max-width: 991.98px){
                 .ticket_section_instruction { padding-bottom: 60px; }
+            }
+
+            .ticket_deco_bling_pos_L { position: absolute; left: max(calc((100% - 1100px) / 4), 16px); top: 40%; }
+            .ticket_deco_bling_pos_R { position: absolute; right: max(calc((100% - 1100px) / 4), 16px); top: 40%; }
+            @media (max-width: 991.98px){
+                .ticket_deco_bling_pos_L { left: max(calc((100% - 500px) / 4), 8px); top: 8%; }
+                .ticket_deco_bling_pos_R { right: max(calc((100% - 500px) / 4), 8px); top: 24%; }
             }
 
 
