@@ -1,13 +1,3 @@
-set100vh()
-window.onresize = function(){
-	set100vh()
-}
-
-function set100vh(){
-	document.documentElement.style.setProperty('--100vh', window.innerHeight + 'px' )
-}
-
-
 
 function SetCookieTool(name, value) { var Days = 30; var exp = new Date(); exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1e3); document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString(); }
 function getCookieTool(name) { var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)")); if (arr != null) return unescape(arr[2]); return null; }
@@ -97,7 +87,7 @@ function news(types,pages){
     }else{
         newstype=getQueryString('type')
     }
-    $('.loading').css('display', 'flex');
+    $('.loading').addClass('active');
     $.ajax({
         url: apiUrl+'/api/news/list',
         type: 'POST',
@@ -108,14 +98,12 @@ function news(types,pages){
             page:newspage
         },
         error: function (xhr) {
-            $(".loading").hide();
+            $('.loading').removeClass('active');
             alert('Ajax request');
         },
         success: function (obj) {
-           
-            $('.loading').css('display', 'none');
+            $('.loading').removeClass('active');
             data=obj.data.news.data
-      
            // newsCount = Math.ceil(obj.data.news.total / 10);
             
             if (obj.status == 1) {
@@ -141,7 +129,7 @@ function getNewsDetail(id){
    
     if(id!=undefined && id!='')//列表
     {
-        $('.loading').css('display', 'flex');
+        $('.loading').addClass('active');
         $.ajax({
             url: apiUrl+'/api/news/detail',
             type: 'GET',
@@ -150,19 +138,16 @@ function getNewsDetail(id){
                 lang: lan,
             },
             error: function (xhr) {
-                $(".loading").hide();
+                $('.loading').removeClass('active');
                 alert('Ajax request');
             },
             success: function (obj) {
-               
-                $('.loading').css('display', 'none');
+                $('.loading').removeClass('active');
                 data=obj.data.news
                 if (obj.status == 1) {
-                  
                    // $('#tag').html(data[0].type)
                     $('#title').html(data[0].title)
                     $('#news-container').html(data[0].content)
-                    
                 } else {
                     $('#news-container').html("<p data-i18n='all.nodata'></p>")
                     $('.i18lan').localize();
