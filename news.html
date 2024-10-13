@@ -25,7 +25,7 @@
     <!-- main -->
     <link href="static/common/css/main.css" rel="stylesheet">
     <script src="static/common/js/lan.js?v=10"></script>
-    <script src="static/common/js/main.js?v=10"></script>
+    <script src="static/common/js/main.js?v=11"></script>
 </head>
 <body>
     <div class="loading"><p>Loading...</p></div>
@@ -50,8 +50,8 @@
                     <h2 class="section_top_signboard signboard signboard_primary"  data-i18n="all.news"></h2>
                     <div class="oval_body container">
                         <div class="news-container">
-							<div class="row">
-								<div class="col-12 col-sm-6 col-lg-4">
+							<div class="row" id="news">
+								<!--<div class="col-12 col-sm-6 col-lg-4">
 									<a href="news_content.html">
 										<div class="news-item">
 											<img class="news-img" src="static/common/img/index-banner.png">
@@ -66,7 +66,7 @@
 											<h5 class="news-text">2025 台北國際插畫博覽會 開始報名！</h5>
 										</div>
 									</a>
-								</div>
+								</div>-->
 							</div>
 						</div>
 					</div>
@@ -81,7 +81,9 @@
 </html>
 
 <script>
-  //news(-1,1)
+$(document).ready(function(){
+  news(-1,1)
+})
 </script>
 
 <style>

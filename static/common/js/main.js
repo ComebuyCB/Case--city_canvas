@@ -79,14 +79,15 @@ function setLan(lans){
 var newspage=1
 //總共頁數
 var newsCount=1
+var apiUrl='http://backend.zheng.fuyuki.work'
 function news(types,pages){
     newspage=pages
-    newstype=0;
+    /*newstype=0;
     if(types!=-1){
         newstype=types;
     }else{
         newstype=getQueryString('type')
-    }
+    }*/
     $('.loading').addClass('active');
     $.ajax({
         url: apiUrl+'/api/news/list',
@@ -94,7 +95,7 @@ function news(types,pages){
         data: {
             lang: lan,
             //type:newType[newstype],
-            type:-1,
+            //type:1,
             page:newspage
         },
         error: function (xhr) {
@@ -105,24 +106,27 @@ function news(types,pages){
             $('.loading').removeClass('active');
             data=obj.data.news.data
            // newsCount = Math.ceil(obj.data.news.total / 10);
-            
-            if (obj.status == 1) {
+            console.log(data)
+            var _html=''
+            if (obj.status === '1') {
                 for(var i=0;i<data.length;i++) {
-                    _html='<div class="row"><div class="col-12 col-md-6 col-lg-4">'
-                    _html='<a href="newscontent.html?id='+data[i]['uuid']+'"><div class="news-item">'             
-                    _html+='<img src="'+apiUrl+'/uploads/'+data[i]['preview_img']+'" alt="">'                                     
-                    _html+='<h5>'+data[i]['title'] +'</h5>'                   
-                    _html+='</div> </a></div>'                
-                    $('.news-container').append(_html); 
-                }       
+                    console.log(data[i])
+                    _html='<div class="col-12 col-md-6 col-lg-4">'
+                    _html+='<a href="news_content.html?id='+data[i]['uuid']+'"><div class="news-item">'             
+                    _html+='<img src="'+obj.data.image_url+'/'+data[i]['preview_img']+'" alt=""  class="news-img">'                                     
+                    _html+='<h5 class="news-text">'+data[i]['title'] +'</h5>'                   
+                    _html+='</a></div> ' 
+                    console.log(_html)
+                    $('#news').append(_html);                   
+                }   
+                 
             } else {
-                alert(dates.Msg)
+                alert(obj.Msg)
             }
         }
     })
 
 }
-
 
 
 function getNewsDetail(id){
