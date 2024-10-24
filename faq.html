@@ -44,23 +44,22 @@
                     </ol>
                 </nav>
             </div>
-            <section class="oval_section_block">
-                <div class="oval_section oval_section_primary_full">
-                    <div class="deco_bling" style="--container-max-w: 700px;"></div>
-                    <h2 class="section_top_signboard signboard signboard_primary"  data-i18n="nav.n4"></h2>
-                    <div class="oval_body container">
-                        <div class="mx-auto px-4 py-3" style="max-width: 700px;">
-                            <div class="accordion FAQ_accordion" id="faqAccordion">
-                                <div class="accordion-item" v-for="(item, idx) of FAQ_data" :key="item.title">
-                                    <h2 class="accordion-header" :id="'f' + idx">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" :data-bs-target="'#c' + idx" aria-expanded="true" aria-controls="collapseOne">
-                                            {{ item.title }}
-                                        </button>
-                                    </h2>
-                                    <div :id="'c' + idx" class="accordion-collapse collapse" :aria-labelledby="'f' + idx" data-bs-parent="#faqAccordion">
-                                        <div class="accordion-body">
-                                            {{ item.content }}
-                                        </div>
+            <section class="oval_section">
+                <div class="oval_section_bg _primary _full"></div>
+                <div class="deco_bling" style="--container-max-w: 700px;"></div>
+                <h2 class="section_top_signboard signboard signboard_primary"  data-i18n="nav.n4"></h2>
+                <div class="oval_body container">
+                    <div class="mx-auto px-4 py-3" style="max-width: 700px;">
+                        <div class="accordion FAQ_accordion" id="faqAccordion">
+                            <div class="accordion-item" v-for="(item, idx) of FAQ_data" :key="item.title">
+                                <h2 class="accordion-header" :id="'f' + idx">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" :data-bs-target="'#c' + idx" aria-expanded="true" aria-controls="collapseOne">
+                                        {{ item.title }}
+                                    </button>
+                                </h2>
+                                <div :id="'c' + idx" class="accordion-collapse collapse" :aria-labelledby="'f' + idx" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        {{ item.content }}
                                     </div>
                                 </div>
                             </div>
