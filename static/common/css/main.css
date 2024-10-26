@@ -371,18 +371,31 @@ Structure instruction：
             .intro_img_block > img { width: 100%; height: 100%; object-fit: cover; }
 
             .intro_section_activity.pill_section { background-position: left calc(100% - 150px), right 200px; }
-            .intro_activity_img_block { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; row-gap: 30px; margin-top: 24px; }
-            .intro_activity_img1 { width: auto; display: block; max-width: 100%; position: static; margin-right: auto; }
-            .intro_activity_img2 { width: auto; display: block; max-width: 100%; position: absolute; right: 0; top: 60px; }
-            .intro_activity_img3 { width: auto; display: block; max-width: 100%; position: relative; }
+            .intro_activity_img_block { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; row-gap: 86px; margin-top: 24px; }
+            .intro_activity_img_block > ._block { position: relative; width: 321px; aspect-ratio: 321/269; padding: 50px; display: flex; align-items: center; max-width: 100%; }
+            .intro_activity_img_block > ._block::before { content: ''; position: absolute; width: 100%; height: 100%; bottom: -8px; right: -24px; background: url(../img/intro/point_shadow.png) center center no-repeat; background-size: contain; }
+            .intro_activity_img_block > ._block::after { content: ''; position: absolute; width: 100%; height: 100%; inset: 0; border-radius: 100%; background: var(--primary); }
+            .intro_activity_img_block > ._block > ._num { position: absolute; z-index: 1; inset: 0; max-width: 100%; width: 125px; left: -40px; top: -64px; }
+            .intro_activity_img_block > ._block > ._txt { position: relative; z-index: 1; font-size: 18px; text-indent: 2em; color: white; display: flex; align-items: center; padding-block: 16px; }
+            .intro_activity_img_block > ._block > ._txt::before,
+            .intro_activity_img_block > ._block > ._txt::after { content: ''; display: block; position: absolute; background: #F6BD00; height: 2px; width: 45px; left: 50%; transform: translateX(-50%); }
+            .intro_activity_img_block > ._block > ._txt::before { top: 0; }
+            .intro_activity_img_block > ._block > ._txt::after { bottom: 0; }
+
+            @media (min-width: 992px){
+                .intro_activity_img_block > ._block:nth-child(1) { margin-right: auto; }
+                .intro_activity_img_block > ._block:nth-child(2) { position: absolute; right: 0; top: 70px; }
+            }
+
             @media (max-width: 991.98px){
+                .intro_activity_img_block { margin: 24px; row-gap: 60px; }
+                .intro_activity_img_block > ._block { width: 300px; padding: 42px; }
+                .intro_activity_img_block > ._block > ._num { width: 110px; left: -30px; top: -52px; }
+                .intro_activity_img_block > ._block > ._txt { font-size: 16px; }
                 .intro_section_activity.pill_section { background-position: left calc(100% - 50px), right 50px; }
-                .intro_activity_img_block { height: auto; }
-                .intro_activity_img1 { width: 320px; position: static; margin-inline: auto; }
-                .intro_activity_img2 { width: 320px; position: static; margin-inline: auto; }
-                .intro_activity_img3 { width: 320px; position: static; margin-inline: auto; transform: none; }
             }
             .intro_row_cols_2 { align-items: center; max-width: 900px; line-height: 1.77; margin-inline: auto; }
+
 
 
         /*=== ticket.html ===*/
@@ -392,12 +405,12 @@ Structure instruction：
                 .ticket_time_title { font-size: 18px; flex-direction: column; align-items: center; }
                 .ticket_time_title ._date { font-size: 36px; }
             }
-            .ticket_block { display: flex; flex-direction: column; flex-wrap: wrap; justify-content: center; text-align: center; min-height: 360px; max-width: 400px; margin-inline: auto; }
-            .ticket_block ._title {  margin-bottom: -57px; }
+            .ticket_block { display: flex; flex-direction: column; flex-wrap: wrap; justify-content: center; text-align: center; min-height: 350px; max-width: 400px; margin-inline: auto; }
+            .ticket_block ._title { margin-bottom: -57px; font-size: 28px; font-weight: bold; }
             .ticket_block ._body { flex-grow: 1; font-size: 18px; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; background: var(--primary); border-radius: 15px; border: 3px solid #FFF; line-height: 1.77; }
             .ticket_block ._body._white { border-color: white; background: white; color: var(--dark); }
             .ticket_block ._body._vip { border-color: var(--secondary); background: var(--primary); color: white; }
-            .ticket_block ._body ._em { font-size: 1.3em; font-weight: bold; }
+            .ticket_block ._em { font-size: 1.3em; font-weight: bold; }
 
             .ticket_section_instruction { padding-bottom: 120px; }
             @media (max-width: 991.98px){
