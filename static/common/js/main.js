@@ -42,6 +42,7 @@ var newType=[];
 var pages=''
 var lan='zh-tw'
 $(document).ready(function(){
+
 	var objs=getLocalStorageItem('lan')
 	if(objs!=null){
 		lan=objs.Msg;

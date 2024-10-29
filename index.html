@@ -20,11 +20,13 @@
     
     <!-- plugins -->
     <link href="static/plugins/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/common/js/aos.css" >
+    <script src="static/common/js/aos.js"></script>
 
     <!-- main -->
     <link href="static/common/css/main.css?v=10" rel="stylesheet">
-    <script src="static/common/js/lan.js?v=10"></script>
-    <script src="static/common/js/main.js?v=10"></script>
+    <script src="static/common/js/lan.js?v=12"></script>
+    <script src="static/common/js/main.js?v=11"></script>
 </head>
 <body>
     <div id="wrap"  class="i18lan">
@@ -36,23 +38,23 @@
             <div class="index_banner_block">
                 <img src="static/common/img/index-banner.jpg" class="img-fluid" alt="">
             </div>
-            <section class="oval_section index_oval_section oval_section_margin_top">
+            <section class="oval_section index_oval_section oval_section_margin_top" >
                 <div class="oval_section_bg _primary _full"></div>
                 <div class="deco_bling index_deco_bling" style="--container-max-w: 560px"></div>
-                <h1 class="section_top_signboard signboard signboard_primary signboard_sm" data-i18n="all.title">
+                <h1 class="section_top_signboard signboard signboard_primary signboard_sm" data-i18n="all.title"  >
                     2025亞洲原創角色節
                 </h1>
-                <div class="oval_body container text-center px-3 pt-sm-5 pb-0 pb-lg-4">
-                    <div class="mx-auto" style="max-width: 800px;">
-                        <div class="mt-lg-3 px-4">
+                <div class="oval_body container text-center px-3 pt-sm-5 pb-0 pb-lg-4" >
+                    <div class="mx-auto" style="max-width: 800px;"  data-aos="fade-up">
+                        <div class="mt-lg-3 px-4" data-i18n="all.index_tip">
                             繁忙的都會生活中，插畫以其溫暖愉悅的風格和充滿力量的創意，<br class="d-none d-md-block">
                             化作街頭告示或療癒小物，讓我們細細品味插畫藝術與生活日常緊緊相依的圖圖瞬間。
                         </div>
                         <div class="index_opacity_pill_block mt-4">
-                            <span data-i18n="all.index3"></span>:2025年03月14日(五) – 03月16日(日) <br class="d-md-none"> <!--活動地點:台北花博公園-爭豔館-->
+                            <span data-i18n="all.index3"></span>:<span  data-i18n="all.index4">2025年03月14日(五) – 03月16日(日)</span> <br class="d-md-none"> <!--活動地點:台北花博公園-爭豔館-->
                         </div>
                     </div>
-                    <div class="pt-4 pt-lg-5 pb-5">
+                    <div class="pt-4 pt-lg-5 pb-5"  data-aos="fade-up">
                         <div class="sponsors_block">
                             <div class="_block1">
                                 <div data-i18n="all.index1">主辦單位</div>
@@ -95,3 +97,6 @@
     </script>
 </body>
 </html>
+<script>
+    AOS.init();
+</script>

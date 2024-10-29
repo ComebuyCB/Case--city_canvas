@@ -21,40 +21,41 @@
 
     <!-- plugins -->
     <link href="static/plugins/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="static/common/js/aos.css" >
+    <script src="static/common/js/aos.js"></script>
     <!-- main -->
     <link href="static/common/css/main.css?v=5" rel="stylesheet">
-    <script src="static/common/js/lan.js?v=10"></script>
-    <script src="static/common/js/main.js?v=10"></script>
+    <script src="static/common/js/lan.js?v=15"></script>
+    <script src="static/common/js/main.js?v=15"></script>
 </head>
 <body>
-    <div id="wrap" class="i18lan">
+    <div id="wrap" class="i18lan" >
         <header>
             
         </header>
 
-        <main>
+        <main style="overflow: hidden;">
             <div class="banner_block">
                 <h1 class="banner_title" data-i18n="nav.n0">展會介紹</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page" data-i18n="nav.n0">展會介紹</li>
+                        <li class="breadcrumb-item" ><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active"  aria-current="page" data-i18n="nav.n0">展會介紹</li>
                     </ol>
                 </nav>
             </div>
-            <div class="oval_section">
+            <div class="oval_section" >
                 <div class="oval_section_bg _primary _oval"></div>
                 <div class="deco_bling" style="--container-max-w: 900px"></div>
-                <h2 class="section_top_signboard signboard signboard_primary">年度主題</h2>
+                <h2 class="section_top_signboard signboard signboard_primary" data-i18n="nav.n0">年度主題</h2>
                 <div class="oval_body container d-flex">
-                    <div class="row gy-3 gx-5 row-cols-md-2 intro_row_cols_2">
-                        <div>
-                            <div class="fs-h3 fw-bold mb-3">「台灣原創匯」</div>
-                            <div>2022年首度舉辦「台灣原創匯」將許多台灣原創角色與插畫品牌齊聚一堂，2024年將其經驗重新轉化吸收，更聚焦於「原創角色」於2024年宣告「亞洲原創角色節」開跑，嶄新面貌將於2025年三月與大家見面！</div>
+                    <div class="row gy-3 gx-5 row-cols-md-2 intro_row_cols_2" >
+                        <div data-aos="fade-right">
+                            <div class="fs-h3 fw-bold mb-3"  data-i18n="intro.t1" >「亞洲角色原創節」</div>
+                            <div data-i18n="intro.t2">2022年首度舉辦「台灣原創匯」將許多台灣原創角色與插畫品牌齊聚一堂，2024年將其經驗重新轉化吸收，更聚焦於「原創角色」於2024年宣告「亞洲原創角色節」開跑，嶄新面貌將於2025年三月與大家見面！</div>
                         </div>
                         <div>
-                            <div class="intro_img_block" style="--bg: #D9D9D9;">
+                            <div class="intro_img_block" style="--bg: #D9D9D9;" data-aos="fade-left">
                                 <img src="static/common/img/intro/intro_p1.jpg">
                             </div>
                         </div>
@@ -64,30 +65,32 @@
             <section class="intro_section_activity pill_section has_oval_section_atTop has_oval_section_atBottom">
                 <div class="container">
                     <div class="mx-auto" style="max-width: 900px;">
-                        <div class="text-center">
-                            <h2 class="signboard signboard_primary border-0 bg-transparent">「亞洲原創角色節」<br>三大目標</h2>
+                        <div class="text-center" data-aos="fade-up">
+                            <h2 class="signboard signboard_primary border-0 bg-transparent" style="white-space:unset"><div data-i18n="intro.t1" style="display: block;">「亞洲原創角色節」</div></h2>
+                            <h2 class="signboard  border-0 bg-transparent" ><div data-i18n="intro.t3" style="display: block;">三大目標</div></h2>
+
                         </div>
                         <div class="intro_activity_img_block">
-                            <div class="_block">
+                            <div class="_block" data-aos="zoom-in">
                                 <img class="_num" src="static/common/img/intro/point1.png" alt="">
-                                <div class="_txt">
+                                <div class="_txt" data-i18n="intro.t4">
                                     匯集台灣各領域的原創作品，為創作者提供了一個展示、交流與銷售的平台。
                                 </div>
                             </div>
-                            <div class="_block">
+                            <div class="_block" data-aos="zoom-in">
                                 <img class="_num" src="static/common/img/intro/point2.png" alt="">
-                                <div class="_txt">
+                                <div class="_txt" data-i18n="intro.t5">
                                     專業陪跑，建立台灣角色品牌的授權觀念，媒合工具與媒合洽談技巧等。
                                 </div>
                             </div>
-                            <div class="_block">
+                            <div class="_block" data-aos="zoom-in">
                                 <img class="_num" src="static/common/img/intro/point3.png" alt="">
-                                <div class="_txt">
+                                <div class="_txt" data-i18n="intro.t6">
                                     整合多年累積「馬來西亞」「日本」「韓國」等授權市場資源，陪著台灣的原創角色一起邁向國際市場。
                                 </div>
                             </div>
                         </div>
-                        <div class="c-gray fs-h5 text-center py-5 px-4">
+                        <div class="c-gray fs-h5 text-center py-5 px-4" data-i18n="intro.t7" data-aos="fade-up">
                             為鼓勵更前期的角色創作者加入，「亞洲原創角色節」將以更符合參展者需求的經濟效益，來做為展覽規劃，成為推動台灣原創角色在國內外市場持續發展的重要平台，並期待未來能攜手台灣IP參與更多海外展會與授權交流活動。
                         </div>
                     </div>
@@ -96,33 +99,32 @@
             <div class="oval_section">
                 <div class="oval_section_bg _secondary _full"></div>
                 <div class="deco_bling"></div>
-                <div class="text-center">
-                    <h2 class="section_top_signboard signboard signboard_secondary">展會起源</h2>
+                <div class="text-center" data-aos="fade-up">
+                    <h2 class="section_top_signboard signboard signboard_secondary" data-i18n="intro.t8"></h2>
                 </div>
                 <div class="oval_body container">
                     <div class="row gy-3 gx-5 row-cols-md-2 intro_row_cols_2 pb-5">
                         <div>
-                            <div>
-                                「亞洲角色原創節」為台灣角色品牌授權協會與靚整合行銷有限公司聯手舉辦。期望整合台灣角協多年累積的授權經驗與國際資源，替台灣創作者與角色品牌帶來更多機會與視野。
+                            <div data-i18n="intro.t9" data-aos="fade-up"> 
+                                
                             </div>
                         </div>
                         <div>
-                            <div class="intro_img_block">
+                            <div class="intro_img_block" data-aos="fade-up">
                                 <img src="static/common/img/intro/intro_p2.jpg">
                             </div>
                         </div>
                     </div>  
                     <div class="text-center mt-lg-5 mb-4 mb-lg-5">
-                        <h2 class="signboard signboard_secondary">關於我們</h2>
+                        <h2 class="signboard signboard_secondary" data-i18n="intro.t10" data-aos="fade-up"></h2>
                     </div>
                     <div class="row gy-3 gx-5 row-cols-md-2 intro_row_cols_2 pb-5">
-                        <div class="order-md-last">
-                            <div>
-                                「亞洲角色原創節」由台灣角協理事長、同時也是CWT同人誌負責人—鄭文福理事長發起，鄭理事長多年來致力推動台灣原創作品發展，協助台灣原創作品在國內建立穩固的商業基礎，並透過台灣角協，舉辦各種專業論壇與交流活動，刺激產業發展與質量提升。
+                        <div class="order-md-last" data-aos="fade-up">
+                            <div data-i18n="intro.t11">
                             </div>
                         </div>
                         <div>
-                            <div class="intro_img_block">
+                            <div class="intro_img_block" data-aos="fade-up">
                                 <img src="static/common/img/intro/intro_p3.jpg">
                             </div>
                         </div>
@@ -137,3 +139,7 @@
     </div>
 </body>
 </html>
+
+<script>
+    AOS.init();
+</script>
